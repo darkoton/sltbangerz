@@ -56,6 +56,7 @@ body {
 @import "./components/_values";
 @import "./components/_goal";
 @import "./components/_rules";
+@import "./components/_wanted";
 // @import "./components/_preloader";
 
 //< " MAIN BLOCK " >=============================================================================================================>//
@@ -111,8 +112,9 @@ body {
   }
 
   & .part-2 {
-    @include fluid(margin-left, -45px, -15px, 680px, 1280px);
     z-index: 2;
+
+    @include fluid(margin-left, -45px, -15px, 680px, 1280px);
 
     @media (max-width: 680px) {
       @include fluid(margin-left, -30px, -20px, 320px, 680px);

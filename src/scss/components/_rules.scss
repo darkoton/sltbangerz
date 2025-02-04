@@ -10,7 +10,7 @@
     &__title {
         @include fluid(font-size, 86px, 30px, 320px, 1280px);
         @include fluid(line-height, 107px, 35px, 320px, 1280px);
-        @include fluid(margin-bottom, 26px, 10px, 320px, 1280px);
+        @include fluid(margin-bottom, 26px, 15px, 320px, 1280px);
 
         span {
             &.o {
