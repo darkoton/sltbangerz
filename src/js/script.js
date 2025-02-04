@@ -5,7 +5,7 @@ import isDevice from './modules/device.js'; //DEFINE DEVICE
 
 // import './modules/preloader.js'; // PRELOADER
 
-// import "./modules/spoiler.js"  // SPOILERS
+import './modules/spoiler.js'; // SPOILERS
 
 // import "./modules/dynamic_adap.js"  // DYNAMIC ADAPTIVE
 
