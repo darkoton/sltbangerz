@@ -1,0 +1,184 @@
+.about {
+  background: url("../img/about/bg.jpg") 0 0 / cover no-repeat;
+
+  &__body {
+    @include fluid(padding-top, 40px, 20px, 320px, 1280px);
+    @include fluid(padding-bottom, 30px, 15px, 320px, 1280px);
+  }
+
+  &__title {
+    @include fluid(font-size, 86px, 30px, 320px, 1280px);
+    @include fluid(line-height, 107px, 35px, 320px, 1280px);
+    @include fluid(margin-bottom, 36px, 18px, 320px, 1280px);
+
+    & span {
+      &.a {
+        transform: rotate(-4deg);
+      }
+      &.b {
+        transform: rotate(3deg);
+      }
+      &.o {
+        transform: rotate(-4deg);
+      }
+      &.u {
+        transform: rotate(4deg);
+      }
+      &.t {
+        transform: rotate(4deg);
+      }
+      &.u {
+        transform: rotate(-3deg);
+      }
+      &.s {
+        transform: rotate(-3deg);
+      }
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+
+    @include fluid(gap, 30px, 10px, 320px, 1280px);
+
+    &.right {
+      & .about__block-info {
+        align-items: flex-end;
+        text-align: right;
+      }
+      @media (max-width: 680px) {
+        & .about__block-info {
+          align-items: stretch;
+          text-align: center;
+        }
+      }
+    }
+
+    @media (max-width: 680px) {
+      flex-direction: column-reverse;
+      &.right {
+        flex-direction: column;
+      }
+    }
+
+    &-img {
+      position: relative;
+      width: 100%;
+      max-width: 50%;
+
+      @media (max-width: 680px) {
+        max-width: 100%;
+      }
+
+      img {
+        border-radius: 30px;
+        width: 100%;
+
+        @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+      }
+    }
+
+    &:nth-child(1) {
+      & .about__block-img {
+        &::before {
+          content: "";
+          width: 87px;
+          height: 150px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -30%);
+          background: url("../img/about/decor-1.png") 0 0 / contain no-repeat;
+
+          @include fluid(width, 87px, 60px, 320px, 1280px);
+          @include fluid(height, 150px, 72px, 320px, 1280px);
+        }
+      }
+    }
+    &:nth-child(2) {
+      & .about__block-img {
+        &::before {
+          content: "";
+          width: 144px;
+          height: 173px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(45%, -45%);
+          background: url("../img/about/decor-2.png") 0 0 / contain no-repeat;
+
+          @include fluid(width, 144px, 83px, 320px, 1280px);
+          @include fluid(height, 173px, 98px, 320px, 1280px);
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 50%;
+
+      @include fluid(gap, 20px, 10px, 320px, 1280px);
+
+      @media (max-width: 680px) {
+        max-width: 100%;
+        align-items: center !important;
+        text-align: center;
+      }
+    }
+    &-title {
+      font-family: $fontBebasNeue;
+      font-weight: 400;
+      font-size: 35px;
+      text-transform: uppercase;
+      color: #c699b5;
+      display: flex;
+      align-items: flex-end;
+
+      @include fluid(font-size, 35px, 25px, 320px, 1280px);
+      @include fluid(line-height, 42px, 32px, 320px, 1280px);
+
+      & .pencil {
+        width: 14px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &-text {
+      font-weight: 300;
+      line-height: 1.2;
+      color: #c699b5;
+      margin-bottom: 4px;
+      max-width: 313px;
+
+      @include fluid(font-size, 14px, 12px, 320px, 1280px);
+
+      @media (max-width: 680px) {
+        max-width: 100%;
+      }
+    }
+    &-mask {
+      width: 100%;
+      max-width: 54px;
+
+      @include fluid(max-width, 54px, 30px, 320px, 1280px);
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
