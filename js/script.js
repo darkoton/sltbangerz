@@ -5,13 +5,13 @@ import isDevice from './modules/device.js'; //DEFINE DEVICE
 
 // import './modules/preloader.js'; // PRELOADER
 
-// import "./modules/spoiler.js"  // SPOILERS
+import './modules/spoiler.js'; // SPOILERS
 
 // import "./modules/dynamic_adap.js"  // DYNAMIC ADAPTIVE
 
 // import "./modules/scroll_header.js"  // SCROLL HEADER
 
-// import "./modules/swiper.js"  // SLIDER SWIPER
+import './modules/swiper.js'; // SLIDER SWIPER
 
 // import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
 
