@@ -1,9 +1,0 @@
-**/.git
-**/.svn
-**/.hg
-**/node_modules
-**/.scss
-**/.css
-**/.vue
-**/gulp
-**/gulpfile.js
