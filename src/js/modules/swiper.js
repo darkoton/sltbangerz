@@ -1,21 +1,16 @@
-new Swiper(".swiper", {
-  slidesPerView: 1,
-  spaceBetween: 15,
+const swiper = new Swiper('.values__cards', {
   grabCursor: true,
-  loop: true,
-  speed: 800,
-
-  autoplay: {
-    delay: 3500,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  spaceBetween: 8,
 
   breakpoints: {
-    767.8: {},
-  }
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
 });
-

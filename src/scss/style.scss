@@ -53,6 +53,7 @@ body {
 @import "./components/_footer";
 @import "./components/_main";
 @import "./components/_about";
+@import "./components/_values";
 // @import "./components/_preloader";
 
 //< " MAIN BLOCK " >=============================================================================================================>//
@@ -68,7 +69,8 @@ body {
   font-family: $fontBabyGemoy;
   text-align: center;
   color: #fda5cf;
-  -webkit-text-fill-color: #fda5cf; /* Will override color (regardless of order) */
+  -webkit-text-fill-color: #fda5cf;
+  /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff63ad;
   text-shadow:
