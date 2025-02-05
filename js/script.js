@@ -32,9 +32,11 @@ const headerMenu = document.querySelector('.header__menu');
 
 headerOpen.addEventListener('click', () => {
   headerMenu.classList.add('active');
+  document.body.classList.add('_lock-scroll');
 });
 headerClose.addEventListener('click', () => {
   headerMenu.classList.remove('active');
+  document.body.classList.remove('_lock-scroll');
 });
 
 // Fixed header
@@ -70,6 +72,8 @@ links.forEach(link => {
       const offsetPosition = elementPosition - topOffset - header.clientHeight;
 
       link.classList.add('active');
+      headerMenu.classList.remove('active');
+      document.body.classList.remove('_lock-scroll');
 
       window.scrollBy({
         top: offsetPosition,
