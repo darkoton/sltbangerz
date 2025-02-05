@@ -15,7 +15,7 @@ import './modules/swiper.js'; // SLIDER SWIPER
 
 // import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
 
-// import "./modules/tabs.js"  // TABS
+import './modules/tabs.js'; // TABS
 
 // import "./modules/parallax.js"  // PARALLAX EFFECT
 
@@ -35,4 +35,46 @@ headerOpen.addEventListener('click', () => {
 });
 headerClose.addEventListener('click', () => {
   headerMenu.classList.remove('active');
+});
+
+// Fixed header
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});
+
+// Anchors
+
+const links = document.querySelectorAll('[data-link-anchor]');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const id = link.getAttribute('href');
+
+    const scrollTarget = document.getElementById(id);
+
+    links.forEach(l => {
+      l.classList.remove('active');
+    });
+
+    if (scrollTarget) {
+      const topOffset = 5;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+      const offsetPosition = elementPosition - topOffset - header.clientHeight;
+
+      link.classList.add('active');
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  });
 });
