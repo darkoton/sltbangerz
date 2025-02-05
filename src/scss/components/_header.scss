@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   left: 0;
-  z-index: 10;
+  z-index: 190;
   transition: all 0.3s ease 0s;
 
   @include fluid(top, 30px, 10px, 320px, 1280px);
@@ -78,6 +78,7 @@
     letter-spacing: 0.05em;
     color: #c699b5;
     position: relative;
+    transition: all 0.3s ease 0s;
 
     @include fluid(font-size, 14px, 12px, 768px, 1280px);
     @include fluid(line-height, 21px, 18px, 768px, 1280px);

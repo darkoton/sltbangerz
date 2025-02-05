@@ -59,14 +59,22 @@ links.forEach(link => {
 
     const scrollTarget = document.getElementById(id);
 
-    const topOffset = 5;
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-
-    const offsetPosition = elementPosition - topOffset - header.clientHeight;
-
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: 'smooth',
+    links.forEach(l => {
+      l.classList.remove('active');
     });
+
+    if (scrollTarget) {
+      const topOffset = 5;
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+      const offsetPosition = elementPosition - topOffset - header.clientHeight;
+
+      link.classList.add('active');
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
   });
 });
