@@ -1,6 +1,6 @@
 .main {
   background: url("../img/main/bg.jpg") 0 0 / cover no-repeat;
-  @include fluid(padding-top, 90px, 40px, 320px, 1280px);
+  @include fluid(padding-top, 90px, 50px, 320px, 1280px);
 
   &__body {
     display: flex;

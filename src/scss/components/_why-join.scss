@@ -1,0 +1,129 @@
+.why-join {
+    background: url("../img/photos/bg.jpg") 0 0 / cover no-repeat;
+
+    &__body {
+        @include fluid(padding-top, 43px, 20px, 320px, 1280px);
+        @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        @include fluid(gap, 104px, 30px, 510px, 1280px);
+        @include fluid(margin-bottom, 37px, 14px, 320px, 1280px);
+
+        @media (max-width: 510px) {
+            flex-direction: column;
+        }
+    }
+
+    &__tab {
+        font-weight: 400;
+        line-height: 90%;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $fontBebasNeue;
+        color: rgba(198, 153, 181, 0.3);
+        transition: all 0.3s ease 0s;
+        background: transparent;
+
+        @include fluid(font-size, 50px, 30px, 320px, 1280px);
+
+        & .undreline {
+            position: relative;
+            white-space: nowrap;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 0%;
+                background-color: #FF2F92;
+                border-radius: 10px;
+                transition: all 0.3s ease 0s;
+
+                @include fluid(height, 6px, 2px, 320px, 1280px);
+                @include fluid(bottom, -7.5px, 0px, 320px, 1280px);
+
+            }
+        }
+
+        &._active {
+            color: #c699b5;
+
+            & .undreline {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__cards {
+        display: none;
+        gap: 8px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        &._active {
+            display: grid;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+
+        @include fluid(gap, 15px, 8px, 320px, 1280px);
+        @include fluid(padding, 30px, 10px, 320px, 1280px);
+        @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+
+        &:nth-child(odd) {
+            background: linear-gradient(121deg, #ff6db3 51%, #d719a4 100%);
+        }
+
+        &:nth-child(even) {
+            background: linear-gradient(90deg, #78abf8 50%, #66e9d5 100%);
+        }
+
+        &:nth-child(4) {
+            background: linear-gradient(190deg, #c982f9 2%, #78abf8 10%, #66e9d5 100%);
+        }
+
+        &-img {
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include fluid(width, 88px, 60px, 320px, 1280px);
+            @include fluid(height, 88px, 60px, 320px, 1280px);
+            @include fluid(padding, 14px, 8px, 320px, 1280px);
+
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            line-height: 90%;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: $fontBebasNeue;
+
+            @include fluid(font-size, 35px, 24px, 320px, 1280px);
+
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 120%;
+            color: #fff;
+
+            @include fluid(font-size, 14px, 12px, 320px, 1280px);
+        }
+    }
+}
