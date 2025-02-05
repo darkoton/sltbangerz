@@ -22,8 +22,8 @@
 
       @include fluid(padding-left, 30px, 15px, 320px, 768px);
       @include fluid(padding-right, 30px, 15px, 320px, 768px);
-      @include fluid(padding-top, 10px, 4px, 320px, 768px);
-      @include fluid(padding-bottom, 10px, 4px, 320px, 768px);
+      @include fluid(padding-top, 10px, 8px, 320px, 768px);
+      @include fluid(padding-bottom, 10px, 8px, 320px, 768px);
     }
   }
 
@@ -111,9 +111,8 @@
     align-items: center;
     background-color: transparent;
     display: none;
-
-    @include fluid(width, 30px, 20px, 320px, 768px);
-    @include fluid(height, 30px, 20px, 320px, 768px);
+    width: 30px;
+    height: 30px;
 
     @media (max-width: 768px) {
       display: flex;

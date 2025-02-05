@@ -1,0 +1,125 @@
+.provide {
+  background: url("../img/provide/bg.jpg") 0 0 / cover no-repeat;
+
+  &__body {
+    @include fluid(padding-top, 43px, 20px, 320px, 1280px);
+    @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 476px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -45%);
+      background: url("../img/provide/decor.png") 0 0 / contain no-repeat;
+
+      @include fluid(width, 135px, 68px, 320px, 1280px);
+      @include fluid(height, 172px, 86px, 320px, 1280px);
+    }
+
+    img {
+      width: 100%;
+
+      @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+    }
+  }
+
+  &__title {
+    font-family: $fontBebasNeue;
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+    text-align: center;
+    color: #c699b5;
+
+    @include fluid(font-size, 65px, 28px, 320px, 1280px);
+    @include fluid(margin-bottom, 40px, 22px, 320px, 1280px);
+  }
+
+  &__main {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    @include fluid(gap, 30px, 15px, 320px, 1280px);
+
+    @media (max-width: 680px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 680px) {
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      font-family: $fontBebasNeue;
+      font-weight: 400;
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: #c699b5;
+      max-width: 313px;
+
+      @include fluid(font-size, 35px, 24px, 320px, 1280px);
+      @include fluid(margin-bottom, 20px, 10px, 320px, 1280px);
+    }
+
+    &-text {
+      font-weight: 300;
+      line-height: 1.2;
+      color: #c699b5;
+      max-width: 313px;
+
+      @include fluid(font-size, 14px, 12px, 320px, 1280px);
+      @include fluid(margin-bottom, 72px, 20px, 320px, 1280px);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 11px;
+  }
+  &__button {
+    color: #d7498d;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 0 0 #d7498d;
+    background: #fff;
+    border-radius: 100px;
+
+    @include fluid(gap, 10px, 5px, 320px, 1280px);
+    @include fluid(padding-top, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-left, 40px, 25px, 320px, 1280px);
+    @include fluid(padding-right, 40px, 25px, 320px, 1280px);
+    @include fluid(font-size, 16px, 12px, 320px, 1280px);
+    @include fluid(line-height, 24px, 20px, 320px, 1280px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    svg {
+      @include fluid(width, 23px, 17px, 320px, 1280px);
+      @include fluid(height, 14px, 11px, 320px, 1280px);
+    }
+  }
+}
