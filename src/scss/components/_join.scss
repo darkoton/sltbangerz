@@ -2,65 +2,128 @@
   background: url("../img/join/bg.jpg") 0 0 / cover no-repeat;
 
   &__body {
-    @include fluid(padding-top, 43px, 20px, 320px, 1280px);
-    @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+    @include fluid(padding-bottom, 74px, 20px, 320px, 1280px);
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:
+      url("../img/join/bg-banner.png") 0 bottom / contain no-repeat,
+      linear-gradient(141deg, #ffadd4 0%, #ff6db3 51%, #d719a4 100%);
+
+    @include fluid(padding-top, 40px, 20px, 320px, 1280px);
+    @include fluid(padding-bottom, 40px, 20px, 320px, 1280px);
+    @include fluid(padding-right, 30px, 10px, 320px, 1280px);
+    @include fluid(padding-left, 30px, 10px, 320px, 1280px);
+    @include fluid(border-radius, 30px, 15px, 320px, 1280px);
   }
 
   &__title {
-    font-family: $fontBebasNeue;
-    font-weight: 400;
-    line-height: 0.9;
-    text-transform: uppercase;
-    text-align: center;
-    color: #c699b5;
+    color: #fff;
+    text-shadow:
+      4px 4px 0 #ff2f92,
+      6px 6px 0 #fff;
 
-    @include fluid(font-size, 65px, 28px, 320px, 1280px);
-    @include fluid(margin-bottom, 25px, 10px, 320px, 1280px);
-  }
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ff63ad;
 
-  &__cards {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(2, 1fr);
+    @include fluid(font-size, 86px, 25px, 320px, 1280px);
+    @include fluid(line-height, 107px, 30px, 320px, 1280px);
+    @include fluid(margin-bottom, 31px, 16px, 320px, 1280px);
 
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-    }
-  }
-  &__card {
-    background: #fff;
-    display: flex;
-    flex-direction: column;
+    & span {
+      &.r {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -22%);
+          background: url("../img/join/decor-1.png") 0 0 / contain no-repeat;
 
-    @include fluid(padding, 30px, 10px, 320px, 1280px);
-    @include fluid(gap, 15px, 8px, 320px, 1280px);
-    @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+          @include fluid(width, 257px, 63px, 320px, 1280px);
+          @include fluid(height, 226px, 59px, 320px, 1280px);
+        }
+      }
 
-    &-img {
-      width: 100%;
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
+      &.o {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          transform: translate(-6%, -22%);
+          background: url("../img/join/decor-2.png") 0 0 / contain no-repeat;
 
-      img {
-        width: 100%;
+          @include fluid(width, 161px, 42px, 320px, 1280px);
+          @include fluid(height, 181px, 38px, 320px, 1280px);
+        }
+      }
+
+      &.r,
+      &.d,
+      &.y,
+      &.t,
+      &.o {
+        transform: rotate(-4deg);
+      }
+
+      &.e,
+      &.a {
+        transform: rotate(3deg);
+      }
+
+      &.j,
+      &.i,
+      &.n {
+        transform: rotate(1deg);
+      }
+
+      &.o-2 {
+        transform: rotate(-6deg);
       }
     }
-    &-title {
-      font-family: $fontBebasNeue;
-      font-weight: 400;
-      line-height: 0.9;
-      text-transform: uppercase;
-      color: #c699b5;
+  }
+  &__text {
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    max-width: 468px;
 
-      @include fluid(font-size, 35px, 24px, 320px, 1280px);
-    }
-    &-text {
-      font-weight: 300;
-      line-height: 1.2;
-      color: #c699b5;
+    @include fluid(font-size, 14px, 12px, 320px, 1280px);
+    @include fluid(margin-bottom, 30px, 15px, 320px, 1280px);
+  }
+  &__button {
+    border-radius: 100px;
+    padding: 15px 40px;
+    box-shadow: 4px 4px 0 0 #d7498d;
+    background: #fff;
+    font-weight: 500;
+    text-align: center;
+    color: #d7498d;
 
-      @include fluid(font-size, 14px, 12px, 320px, 1280px);
+    @include fluid(gap, 10px, 5px, 320px, 1280px);
+    @include fluid(padding-top, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-left, 40px, 25px, 320px, 1280px);
+    @include fluid(padding-right, 40px, 25px, 320px, 1280px);
+    @include fluid(font-size, 16px, 12px, 320px, 1280px);
+    @include fluid(line-height, 24px, 20px, 320px, 1280px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 }

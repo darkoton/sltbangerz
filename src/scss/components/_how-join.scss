@@ -1,0 +1,66 @@
+.how-join {
+  background: url("../img/how-join/bg.jpg") 0 0 / cover no-repeat;
+
+  &__body {
+    @include fluid(padding-top, 43px, 20px, 320px, 1280px);
+    @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+  }
+
+  &__title {
+    font-family: $fontBebasNeue;
+    font-weight: 400;
+    line-height: 0.9;
+    text-transform: uppercase;
+    text-align: center;
+    color: #c699b5;
+
+    @include fluid(font-size, 65px, 28px, 320px, 1280px);
+    @include fluid(margin-bottom, 25px, 10px, 320px, 1280px);
+  }
+
+  &__cards {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__card {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+
+    @include fluid(padding, 30px, 10px, 320px, 1280px);
+    @include fluid(gap, 15px, 8px, 320px, 1280px);
+    @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+
+    &-img {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+
+      img {
+        width: 100%;
+      }
+    }
+    &-title {
+      font-family: $fontBebasNeue;
+      font-weight: 400;
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: #c699b5;
+
+      @include fluid(font-size, 35px, 24px, 320px, 1280px);
+    }
+    &-text {
+      font-weight: 300;
+      line-height: 1.2;
+      color: #c699b5;
+
+      @include fluid(font-size, 14px, 12px, 320px, 1280px);
+    }
+  }
+}
