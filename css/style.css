@@ -584,6 +584,15 @@ body._lock-scroll {
     line-height: 18px;
   }
 }
+@media (any-hover: hover) {
+  .header__link {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  .header__link:hover {
+    color: #fc0083;
+  }
+}
 @media (max-width: 768px) {
   .header__link {
     font-size: 20px;
@@ -639,6 +648,16 @@ body._lock-scroll {
   display: none;
   width: 30px;
   height: 30px;
+  color: #000;
+}
+@media (any-hover: hover) {
+  .header__burger, .header__close {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  .header__burger:hover, .header__close:hover {
+    color: #fc0083;
+  }
 }
 @media (max-width: 768px) {
   .header__burger, .header__close {
