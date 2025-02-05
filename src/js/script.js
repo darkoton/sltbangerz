@@ -36,3 +36,13 @@ headerOpen.addEventListener('click', () => {
 headerClose.addEventListener('click', () => {
   headerMenu.classList.remove('active');
 });
+
+// Fixed header
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});

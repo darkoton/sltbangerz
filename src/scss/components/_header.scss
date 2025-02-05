@@ -4,8 +4,13 @@
   width: 100%;
   left: 0;
   z-index: 10;
+  transition: all 0.3s ease 0s;
 
   @include fluid(top, 30px, 10px, 320px, 1280px);
+
+  &.fixed {
+    top: 5px;
+  }
 
   &__body {
     @include fluid(padding-left, 6px, 0px, 320px, 1280px);
