@@ -46,3 +46,27 @@ window.addEventListener('scroll', () => {
     header.classList.remove('fixed');
   }
 });
+
+// Anchors
+
+const links = document.querySelectorAll('[data-link-anchor]');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const id = link.getAttribute('href');
+
+    const scrollTarget = document.getElementById(id);
+
+    const topOffset = 5;
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+    const offsetPosition = elementPosition - topOffset - header.clientHeight;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  });
+});
