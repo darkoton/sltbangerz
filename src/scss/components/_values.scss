@@ -79,6 +79,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(146deg, #fda5cf 0%, #fa8aff 54%, #c982f9 100%);
 
             @include fluid(width, 88px, 50px, 320px, 1280px);
             @include fluid(height, 88px, 50px, 320px, 1280px);
