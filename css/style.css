@@ -650,6 +650,10 @@ body._lock-scroll {
   height: 30px;
   color: #000;
 }
+.header__burger svg, .header__close svg {
+  color: inherit;
+  stroke: currentColor;
+}
 @media (any-hover: hover) {
   .header__burger, .header__close {
     transition: all 0.3s ease 0s;
