@@ -1,28 +1,25 @@
 //< " CONNECTING JS COMPONENTS " >=============================================================================================================>//
-import isWebp from './modules/webp.js'; //SUPPORT WEBP
+@import './src/js/modules/webp.js'; //SUPPORT WEBP
 
-import isDevice from './modules/device.js'; //DEFINE DEVICE
+@import './src/js/modules/device.js'; //DEFINE DEVICE
 
-// import './modules/preloader.js'; // PRELOADER
+/* @import './src/js/modules/preloader.js'; */ // PRELOADER
 
-import './modules/spoiler.js'; // SPOILERS
+@import './src/js/modules/spoiler.js'; // SPOILERS
 
-// import "./modules/dynamic_adap.js"  // DYNAMIC ADAPTIVE
+/* @import "./src/js/modules/dynamic_adap.js" */  // DYNAMIC ADAPTIVE
 
-// import "./modules/scroll_header.js"  // SCROLL HEADER
+/* @import "./src/js/modules/scroll_header.js" */  // SCROLL HEADER
 
-import './modules/swiper.js'; // SLIDER SWIPER
+@import './src/js/modules/swiper.js'; // SLIDER SWIPER
 
-// import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
+/* @import "./src/js/modules/animate_scroll.js" */  // ANIMATE WITH SCROLL
 
-import './modules/tabs.js'; // TABS
+@import './src/js/modules/tabs.js'; // TABS
 
-// import "./modules/parallax.js"  // PARALLAX EFFECT
+/* @import "./src/js/modules/parallax.js" */  // PARALLAX EFFECT
 
 //< " СКРИПТЫ " >=============================================================================================================>//
-
-isWebp();
-isDevice();
 
 // Header burger
 
@@ -74,7 +71,8 @@ links.forEach(link => {
       link.classList.add('active');
       headerMenu.classList.remove('active');
       document.body.classList.remove('_lock-scroll');
-
+      console.log(offsetPosition);
+      
       window.scrollBy({
         top: offsetPosition,
         behavior: 'smooth',
@@ -82,3 +80,21 @@ links.forEach(link => {
     }
   });
 });
+
+
+window.addEventListener('scroll', () => {
+  links.forEach(link => {
+      const id = link.getAttribute('href');
+  
+      const target = document.getElementById(id);
+  
+      if (target) {
+        const topOffset = target.getBoundingClientRect().top - header.clientHeight;
+        
+        if (topOffset < window.innerHeight / 2 && topOffset >= -target.clientHeight / 2) {
+          links.forEach(l => l.classList.remove('active')); 
+          link.classList.add('active');
+        }
+      }
+  });
+})
