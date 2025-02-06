@@ -25,7 +25,6 @@
       img {
         @include fluid(width, 93px, 35px, 320px, 1280px);
       }
-
     }
 
     span {
@@ -184,7 +183,7 @@
         transition: all 0.3s ease 0s;
 
         &:hover {
-          box-shadow: none;
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
         }
       }
 

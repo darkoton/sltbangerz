@@ -1,117 +1,105 @@
 .wanted {
-    background: url("../img/rules/bg.jpg") 0 0 / cover no-repeat;
+  background: url("../img/rules/bg.jpg") 0 0 / cover no-repeat;
 
-    &__body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        @include fluid(padding-top, 31px, 15px, 320px, 1280px);
-        @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+    @include fluid(padding-top, 31px, 15px, 320px, 1280px);
+    @include fluid(padding-bottom, 43px, 20px, 320px, 1280px);
+  }
+
+  &__title {
+    @include fluid(font-size, 86px, 30px, 320px, 1280px);
+    @include fluid(line-height, 107px, 35px, 320px, 1280px);
+    @include fluid(margin-bottom, 26px, 15px, 320px, 1280px);
+
+    & .pencil {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      z-index: 2;
+      @include fluid(margin-left, -25px, -10px, 680px, 1280px);
+
+      img {
+        @include fluid(width, 89px, 35px, 320px, 1280px);
+      }
     }
 
-    &__title {
-        @include fluid(font-size, 86px, 30px, 320px, 1280px);
-        @include fluid(line-height, 107px, 35px, 320px, 1280px);
-        @include fluid(margin-bottom, 26px, 15px, 320px, 1280px);
+    span {
+      &.s,
+      &.t,
+      &.w,
+      &.a {
+        transform: rotate(-4deg);
+      }
 
-        & .pencil {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            z-index: 2;
-            @include fluid(margin-left, -25px, -10px, 680px, 1280px);
+      &.l {
+        transform: rotate(3deg);
+      }
 
-            img {
-                @include fluid(width, 89px, 35px, 320px, 1280px);
-            }
-        }
+      &.n {
+        transform: rotate(1deg);
+      }
 
-        span {
+      &.t-2 {
+        transform: rotate(-6deg);
+      }
 
-            &.s,
-            &.t,
-            &.w,
-            &.a {
-                transform: rotate(-4deg);
-            }
-
-            &.l {
-                transform: rotate(3deg);
-            }
-
-            &.n {
-                transform: rotate(1deg);
-            }
-
-            &.t-2 {
-                transform: rotate(-6deg);
-            }
-
-            &.e,
-            &.d {
-                transform: rotate(1deg);
-            }
-        }
-
-        & .part-3 {
-            margin-left: 20px;
-        }
+      &.e,
+      &.d {
+        transform: rotate(1deg);
+      }
     }
 
-    &__text {
-        font-weight: 500;
-        line-height: 120%;
-        max-width: 457px;
-        text-align: center;
-        color: #c699b5;
+    & .part-3 {
+      margin-left: 20px;
+    }
+  }
 
-        @include fluid(font-size, 20px, 15px, 320px, 1280px);
-        @include fluid(margin-bottom, 35px, 10px, 320px, 1280px);
+  &__text {
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 457px;
+    text-align: center;
+    color: #c699b5;
+
+    @include fluid(font-size, 20px, 15px, 320px, 1280px);
+    @include fluid(margin-bottom, 35px, 10px, 320px, 1280px);
+  }
+
+  &__button {
+    --shadow-color: #d7498d;
+
+    background: #fda5cf;
+    position: relative;
+    font-family: var(--second-family);
+    font-weight: 500;
+    text-align: center;
+    border-radius: 100px;
+    box-shadow: 4px 4px 0 0 var(--shadow-color);
+    max-width: 192px;
+    color: #d7498d;
+
+    @include fluid(padding-top, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
+    @include fluid(padding-left, 40px, 25px, 320px, 1280px);
+    @include fluid(padding-right, 40px, 25px, 320px, 1280px);
+    @include fluid(font-size, 16px, 12px, 320px, 1280px);
+    @include fluid(line-height, 24px, 20px, 320px, 1280px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+      }
     }
 
-    &__button {
-        --shadow-color: #d7498d;
-
-        background: #fda5cf;
-        position: relative;
-        font-family: var(--second-family);
-        font-weight: 500;
-        text-align: center;
-        border-radius: 100px;
-        box-shadow: 4px 4px 0 0 var(--shadow-color);
-        max-width: 192px;
-        color: #d7498d;
-
-        @include fluid(padding-top, 15px, 10px, 320px, 1280px);
-        @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
-        @include fluid(padding-left, 40px, 25px, 320px, 1280px);
-        @include fluid(padding-right, 40px, 25px, 320px, 1280px);
-        @include fluid(font-size, 16px, 12px, 320px, 1280px);
-        @include fluid(line-height, 24px, 20px, 320px, 1280px);
-
-        @media (any-hover: hover) {
-            cursor: pointer;
-            transition: all 0.3s ease 0s;
-
-            &:hover {
-                box-shadow: none;
-            }
-        }
-
-        @media (max-width: 360px) {
-            max-width: 100%;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(50%, -50%);
-
-            @include fluid(width, 51px, 31px, 320px, 1280px);
-            @include fluid(height, 51px, 31px, 320px, 1280px);
-        }
+    @media (max-width: 360px) {
+      max-width: 100%;
     }
+  }
 }
