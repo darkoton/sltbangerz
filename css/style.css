@@ -646,13 +646,7 @@ body._lock-scroll {
   align-items: center;
   background-color: transparent;
   display: none;
-  width: 30px;
-  height: 30px;
   color: #000;
-}
-.header__burger svg, .header__close svg {
-  color: inherit;
-  stroke: currentColor;
 }
 @media (any-hover: hover) {
   .header__burger, .header__close {
