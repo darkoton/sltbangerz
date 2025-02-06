@@ -64,3 +64,63 @@
     display: inline-block;
   }
 }
+
+.button {
+  --color: #d7498d;
+  --bg: #fff;
+  --shadow: #d7498d;
+
+  border-radius: 100px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color);
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  box-shadow: none;
+
+  @include fluid(gap, 10px, 5px, 320px, 1280px);
+  @include fluid(padding-top, 15px, 10px, 320px, 1280px);
+  @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
+  @include fluid(padding-left, 40px, 25px, 320px, 1280px);
+  @include fluid(padding-right, 40px, 25px, 320px, 1280px);
+  @include fluid(font-size, 16px, 12px, 320px, 1280px);
+  @include fluid(line-height, 24px, 20px, 320px, 1280px);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:before {
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    background: var(--bg);
+  }
+
+  &:after {
+    left: 4px;
+    top: 4px;
+    background-color: var(--shadow);
+    z-index: -2;
+  }
+
+  @media (any-hover: hover) {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+      &::after {
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+}

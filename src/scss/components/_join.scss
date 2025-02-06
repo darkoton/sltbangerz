@@ -102,28 +102,8 @@
     @include fluid(margin-bottom, 30px, 15px, 320px, 1280px);
   }
   &__button {
-    border-radius: 100px;
-    padding: 15px 40px;
-    box-shadow: 4px 4px 0 0 #d7498d;
-    background: #fff;
-    font-weight: 500;
-    text-align: center;
-    color: #d7498d;
-
-    @include fluid(gap, 10px, 5px, 320px, 1280px);
-    @include fluid(padding-top, 15px, 10px, 320px, 1280px);
-    @include fluid(padding-bottom, 15px, 10px, 320px, 1280px);
-    @include fluid(padding-left, 40px, 25px, 320px, 1280px);
-    @include fluid(padding-right, 40px, 25px, 320px, 1280px);
-    @include fluid(font-size, 16px, 12px, 320px, 1280px);
-    @include fluid(line-height, 24px, 20px, 320px, 1280px);
-
-    @media (any-hover: hover) {
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-      &:hover {
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-      }
-    }
+    --color: #d7498d;
+    --bg: #fff;
+    --shadow: #d7498d;
   }
 }
