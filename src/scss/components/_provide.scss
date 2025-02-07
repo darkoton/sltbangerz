@@ -86,7 +86,11 @@
 
     & .swiper-slide {
       height: auto;
-      background: #fff;
+      opacity: 0 !important;
+
+      &.swiper-slide-active {
+        opacity: 1 !important;
+      }
     }
   }
 
