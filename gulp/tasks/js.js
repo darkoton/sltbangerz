@@ -1,10 +1,10 @@
 import webpack from "webpack-stream"
-import jsImport from 'gulp-js-import';
+import fileInclude from 'gulp-file-include';
 
 export const js = () => {
   return app.gulp
-  .src(`${app.path.srcFolder}/js/script.js`)
-  .pipe(jsImport())
+  .src(`${app.path.srcFolder}/js/*.js`)
+  .pipe(fileInclude())
   .pipe(app.gulp.dest(`${app.path.buildFolder}/js`))
   .pipe(app.plugins.browsersync.stream());
 }

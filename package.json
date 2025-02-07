@@ -27,7 +27,6 @@
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-image": "^6.3.1",
-    "gulp-js-import": "^1.0.6",
     "gulp-jsmin": "^0.1.5",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
