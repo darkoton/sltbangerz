@@ -37,6 +37,23 @@
     }
 
     span {
+      &:nth-child(2) {
+        transform: rotate(6.21deg);
+      }
+      &:nth-child(5) {
+        transform: rotate(-3.62deg);
+      }
+      &:nth-child(6) {
+        transform: rotate(3deg);
+      }
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10),
+      &:nth-child(11) {
+        transform: rotate(-3deg);
+      }
+
       &.z-2 {
         transform: rotate(7deg);
 

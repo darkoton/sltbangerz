@@ -12,26 +12,23 @@
     @include fluid(margin-bottom, 36px, 18px, 320px, 1280px);
 
     & span {
-      &.a {
+      &:nth-child(1),
+      &:nth-child(3) {
         transform: rotate(-4deg);
       }
-      &.b {
+
+      &:nth-child(2) {
         transform: rotate(3deg);
       }
-      &.o {
-        transform: rotate(-4deg);
-      }
-      &.u {
+
+      &:nth-child(4),
+      &:nth-child(5) {
         transform: rotate(4deg);
       }
-      &.t {
-        transform: rotate(4deg);
-      }
-      &.u {
-        transform: rotate(-3deg);
-      }
-      &.s {
-        transform: rotate(-3deg);
+
+      &:nth-child(6),
+      &:nth-child(7) {
+        transform: rotate(3deg);
       }
     }
   }

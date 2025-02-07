@@ -16,21 +16,21 @@
     @include fluid(margin-bottom, 41px, 20px, 320px, 1280px);
 
     & span {
-      &.p,
-      &.o {
+      &:nth-child(1),
+      &:nth-child(3) {
         transform: rotate(-4deg);
       }
 
-      &.h {
+      &:nth-child(2) {
         transform: rotate(3deg);
       }
 
-      &.t,
-      &.o-2 {
+      &:nth-child(4),
+      &:nth-child(5) {
         transform: rotate(4deg);
       }
 
-      &.s {
+      &:nth-child(6) {
         transform: rotate(-3deg);
       }
     }

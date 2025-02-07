@@ -34,36 +34,38 @@
     @include fluid(line-height, 107px, 30px, 320px, 1280px);
     @include fluid(margin-bottom, 31px, 16px, 320px, 1280px);
 
-    & span {
-      &.r {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: 2;
-          top: 0;
-          left: 0;
-          transform: translate(-50%, -22%);
-          background: url("../img/join/decor-1.png") 0 0 / contain no-repeat;
-
-          @include fluid(width, 257px, 63px, 320px, 1280px);
-          @include fluid(height, 226px, 59px, 320px, 1280px);
+    & .word:nth-child(1) {
+      & span {
+        &:nth-child(1),
+        &:nth-child(4),
+        &:nth-child(5) {
+          transform: rotate(-4deg);
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          transform: rotate(3deg);
         }
       }
+    }
 
-      &.o {
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: 2;
-          top: 0;
-          left: 0;
-          transform: translate(-6%, -30%);
-          background: url("../img/join/decor-2.png") 0 0 / contain no-repeat;
+    & .word:nth-child(2) {
+      & span {
+        &:nth-child(1),
+        &:nth-child(2) {
+          transform: rotate(-4deg);
+        }
+      }
+    }
 
-          @include fluid(width, 161px, 42px, 320px, 1280px);
-          @include fluid(height, 181px, 38px, 320px, 1280px);
+    & .word:nth-child(3) {
+      & span {
+        &:nth-child(1),
+        &:nth-child(3),
+        & :nth-child(4) {
+          transform: rotate(1deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-6deg);
         }
       }
     }
