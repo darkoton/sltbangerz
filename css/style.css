@@ -3473,7 +3473,10 @@ body._lock-scroll {
 }
 .provide__slider-info .swiper-slide {
   height: auto;
-  background: #fff;
+  opacity: 0 !important;
+}
+.provide__slider-info .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
 }
 .provide__info {
   display: flex;
