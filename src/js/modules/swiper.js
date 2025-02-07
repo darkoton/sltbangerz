@@ -14,3 +14,23 @@ const swiper = new Swiper('.values__cards', {
     },
   },
 });
+
+// PROVIDE SLIDERS
+
+const provideInfo = new Swiper('.provide__slider-info', {
+  spaceBetween: 0,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.provide__button-next',
+    prevEl: '.provide__button-prev',
+  },
+});
+
+const provideGallery = new Swiper('.provide__gallery', {
+  spaceBetween: 0,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.provide__button-next',
+    prevEl: '.provide__button-prev',
+  },
+});

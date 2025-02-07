@@ -59,35 +59,12 @@
           z-index: 2;
           top: 0;
           left: 0;
-          transform: translate(-6%, -22%);
+          transform: translate(-6%, -30%);
           background: url("../img/join/decor-2.png") 0 0 / contain no-repeat;
 
           @include fluid(width, 161px, 42px, 320px, 1280px);
           @include fluid(height, 181px, 38px, 320px, 1280px);
         }
-      }
-
-      &.r,
-      &.d,
-      &.y,
-      &.t,
-      &.o {
-        transform: rotate(-4deg);
-      }
-
-      &.e,
-      &.a {
-        transform: rotate(3deg);
-      }
-
-      &.j,
-      &.i,
-      &.n {
-        transform: rotate(1deg);
-      }
-
-      &.o-2 {
-        transform: rotate(-6deg);
       }
     }
   }
