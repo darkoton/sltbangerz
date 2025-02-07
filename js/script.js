@@ -446,6 +446,26 @@ const swiper = new Swiper('.values__cards', {
     },
   },
 });
+
+// PROVIDE SLIDERS
+
+const provideInfo = new Swiper('.provide__slider-info', {
+  spaceBetween: 0,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.provide__button-next',
+    prevEl: '.provide__button-prev',
+  },
+});
+
+const provideGallery = new Swiper('.provide__gallery', {
+  spaceBetween: 0,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.provide__button-next',
+    prevEl: '.provide__button-prev',
+  },
+});
 ; // SLIDER SWIPER
 
 /* const animItems = document.querySelectorAll('._anim-items');
@@ -573,9 +593,11 @@ window.addEventListener('scroll', () => {
 // Anchors
 
 const links = document.querySelectorAll('[data-link-anchor]');
+let anchorsActive = false
 
 links.forEach(link => {
   link.addEventListener('click', e => {
+    anchorsActive = true
     e.preventDefault();
 
     const id = link.getAttribute('href');
@@ -593,27 +615,36 @@ links.forEach(link => {
       const offsetPosition = elementPosition - topOffset - header.clientHeight;
 
       link.classList.add('active');
+
       headerMenu.classList.remove('active');
       document.body.classList.remove('_lock-scroll');
-      console.log(offsetPosition);
       
       window.scrollBy({
         top: offsetPosition,
         behavior: 'smooth',
       });
     }
+
+    setTimeout(() => {
+      anchorsActive = false
+    }, 500);
   });
 });
 
 
 window.addEventListener('scroll', () => {
+  if (anchorsActive) {
+    return;
+  }
+  
   links.forEach(link => {
       const id = link.getAttribute('href');
   
       const target = document.getElementById(id);
   
-      if (target) {
-        const topOffset = target.getBoundingClientRect().top - header.clientHeight;
+      if (target && id == 'agenda') {
+        
+        const topOffset = target.getBoundingClientRect().top;
         
         if (topOffset < window.innerHeight / 2 && topOffset >= -target.clientHeight / 2) {
           links.forEach(l => l.classList.remove('active')); 
