@@ -1,4 +1,4 @@
-<div class="register">
+<div class="register" @@if(context.id){id="@@id" }>
   <div class="register__wrapper">
     <div class="register__container _container">
       <div class="register__body">
@@ -14,8 +14,23 @@
           <input placeholder="Phone/WhatsApp (Optional)" type="email" class="register__field">
 
           <button class="register__submit button">Register Now</button>
+
+          <p class="register__message register__error">An error occurred :(</p>
+          <p class="register__message register__success">Registration was successful!</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+
+
+  document.querySelector('#@@id .register__submit').addEventListener('click', () => {
+    const messages = document.querySelectorAll('#@@id .register__message')
+
+    messages.forEach(ms => ms.classList.remove('active'))
+
+    messages[Math.floor(Math.random() * messages.length)].classList.add('active')
+  })
+</script>

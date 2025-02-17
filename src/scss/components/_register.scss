@@ -19,6 +19,10 @@
     @include fluid(padding-left, 50px, 30px, 320px, 1280px);
     @include fluid(padding-right, 50px, 30px, 320px, 1280px);
     @include fluid(border-radius, 30px, 15px, 320px, 1280px);
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -46,5 +50,22 @@
     --color: #d7498d;
     --bg: #fda5cf;
     --shadow: #d7498d;
+  }
+
+  &__message {
+    display: none;
+    @include fluid(margin-top, 15px, 10px, 320px, 1280px);
+    @include fluid(font-size, 18px, 16px, 320px, 1280px);
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__error {
+    color: #ff6060;
+  }
+  &__success {
+    color: #7aff60;
   }
 }
