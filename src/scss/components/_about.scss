@@ -159,12 +159,40 @@
       line-height: 1.2;
       color: #c699b5;
       margin-bottom: 4px;
-      max-width: 313px;
+      max-width: 340px;
 
       @include fluid(font-size, 14px, 12px, 320px, 1280px);
 
       @media (max-width: 680px) {
         max-width: 100%;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      & li {
+        font-weight: 300;
+        line-height: 1.2;
+        color: #c699b5;
+        display: flex;
+        gap: 5px;
+        justify-content: flex-end;
+
+        @include fluid(font-size, 14px, 11px, 320px, 1280px);
+
+        &::after {
+          content: "";
+          min-width: 5px;
+          min-height: 5px;
+          width: 5px;
+          height: 5px;
+          margin-top: 5px;
+          border-radius: 50%;
+          background: #fda5cf;
+        }
       }
     }
     &-mask {

@@ -15,9 +15,10 @@
     11px 11px 0 #fff;
   letter-spacing: 10px;
   transform: translateX(3%);
+  flex-wrap: wrap;
 
   display: flex;
-  @include fluid(5px, 15px, 10px, 320px, 1280px);
+  @include fluid(column-gap, 15px, 10px, 320px, 1280px);
 
   & .word {
     display: flex;

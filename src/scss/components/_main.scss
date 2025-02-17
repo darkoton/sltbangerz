@@ -14,8 +14,8 @@
   &__title {
     letter-spacing: 0px;
 
-    @include fluid(font-size, 112px, 30px, 320px, 1280px);
-    @include fluid(line-height, 112px, 30px, 320px, 1280px);
+    @include fluid(font-size, 90px, 30px, 320px, 1280px);
+    @include fluid(line-height, 100px, 40px, 320px, 1280px);
 
     & .word {
       & span:not(:first-child):not(.pencil) {
@@ -36,38 +36,48 @@
       }
     }
 
-    span {
-      &:nth-child(2) {
-        transform: rotate(6.21deg);
-      }
-      &:nth-child(5) {
-        transform: rotate(-3.62deg);
-      }
-      &:nth-child(6) {
-        transform: rotate(3deg);
-      }
-      &:nth-child(7),
-      &:nth-child(8),
-      &:nth-child(9),
-      &:nth-child(10),
-      &:nth-child(11) {
-        transform: rotate(-3deg);
-      }
+    // span {
+    //   &:nth-child(2) {
+    //     transform: rotate(6.21deg);
+    //   }
+    //   &:nth-child(5) {
+    //     transform: rotate(-3.62deg);
+    //   }
+    //   &:nth-child(6) {
+    //     transform: rotate(3deg);
+    //   }
+    //   &:nth-child(7),
+    //   &:nth-child(8),
+    //   &:nth-child(9),
+    //   &:nth-child(10),
+    //   &:nth-child(11) {
+    //     transform: rotate(-3deg);
+    //   }
 
-      &.z-2 {
-        transform: rotate(7deg);
+    //   &.z-2 {
+    //     transform: rotate(7deg);
 
-        @include fluid(font-size, 87px, 24px, 320px, 1280px);
-        @include fluid(margin-left, -10px, -0px, 320px, 1280px, true);
-      }
+    //     @include fluid(font-size, 87px, 24px, 320px, 1280px);
+    //     @include fluid(margin-left, -10px, -0px, 320px, 1280px, true);
+    //   }
 
-      &.z-3 {
-        transform: rotate(-7deg);
+    //   &.z-3 {
+    //     transform: rotate(-7deg);
 
-        @include fluid(font-size, 69px, 18px, 320px, 1280px);
-        @include fluid(margin-left, -10px, -0px, 320px, 1280px, true);
-      }
-    }
+    //     @include fluid(font-size, 69px, 18px, 320px, 1280px);
+    //     @include fluid(margin-left, -10px, -0px, 320px, 1280px, true);
+    //   }
+    // }
+  }
+
+  &__subtitle {
+    font-family: $fontBebasNeue;
+    text-align: center;
+    max-width: 500px;
+    margin-top: 20px;
+
+    @include fluid(font-size, 60px, 40px, 320px, 1280px);
+    @include fluid(line-height, 55px, 35px, 320px, 1280px);
   }
 
   &__text {
@@ -78,7 +88,7 @@
 
     @include fluid(font-size, 16px, 12px, 320px, 1280px);
     @include fluid(line-height, 24px, 20px, 320px, 1280px);
-    @include fluid(margin-top, -17px, 15px, 320px, 1280px);
+    @include fluid(margin-top, 10px, 15px, 320px, 1280px);
     @include fluid(margin-bottom, 23px, 15px, 320px, 1280px);
   }
 
