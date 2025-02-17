@@ -75,6 +75,7 @@
     text-align: center;
     max-width: 500px;
     margin-top: 20px;
+    color: #c699b5;
 
     @include fluid(font-size, 60px, 40px, 320px, 1280px);
     @include fluid(line-height, 55px, 35px, 320px, 1280px);

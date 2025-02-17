@@ -13,10 +13,12 @@
           <input placeholder="Email" type="email" class="register__field">
           <input placeholder="Phone/WhatsApp (Optional)" type="email" class="register__field">
 
-          <button class="register__submit button">Register Now</button>
-
           <p class="register__message register__error">An error occurred :(</p>
           <p class="register__message register__success">Registration was successful!</p>
+
+          <button class="register__submit button">Register Now</button>
+
+
         </div>
       </div>
     </div>
@@ -26,11 +28,23 @@
 <script>
 
 
-  document.querySelector('#@@id .register__submit').addEventListener('click', () => {
-    const messages = document.querySelectorAll('#@@id .register__message')
+  document.querySelector('#@@id .register__submit').addEventListener('click', async () => {
+    document.querySelectorAll('#@@id .register__message').forEach(ms => ms.classList.remove('active'))
 
-    messages.forEach(ms => ms.classList.remove('active'))
+    const successMs = document.querySelector('#@@id .register__success')
+    const errorMs = document.querySelector('#@@id .register__error')
 
-    messages[Math.floor(Math.random() * messages.length)].classList.add('active')
+    try {
+
+      const res = await (await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: "POST"
+      })).json()
+
+      console.log(res);
+
+      successMs.classList.add('active')
+    } catch {
+      errorMs.classList.add('active')
+    }
   })
 </script>
