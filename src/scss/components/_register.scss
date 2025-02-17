@@ -4,6 +4,8 @@
   &__body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     @include fluid(padding-top, 40px, 20px, 320px, 1280px);
     @include fluid(padding-bottom, 40px, 20px, 320px, 1280px);
@@ -70,5 +72,17 @@
 
   &__success {
     color: #222222;
+  }
+
+  &__text {
+    font-weight: 500;
+    text-align: center;
+    color: #c699b5;
+    max-width: 363px;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1280px);
+    @include fluid(line-height, 24px, 20px, 320px, 1280px);
+    @include fluid(margin-top, 20px, 15px, 320px, 1280px);
+    @include fluid(margin-bottom, 23px, 15px, 320px, 1280px);
   }
 }

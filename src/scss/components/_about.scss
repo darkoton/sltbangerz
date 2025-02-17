@@ -12,6 +12,7 @@
     @include fluid(margin-bottom, 36px, 18px, 320px, 1280px);
 
     & span {
+
       &:nth-child(1),
       &:nth-child(3) {
         transform: rotate(-4deg);
@@ -36,7 +37,7 @@
   &__blocks {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   &__block {
@@ -50,6 +51,7 @@
         align-items: flex-end;
         text-align: right;
       }
+
       @media (max-width: 680px) {
         & .about__block-info {
           align-items: stretch;
@@ -60,6 +62,7 @@
 
     @media (max-width: 680px) {
       flex-direction: column-reverse;
+
       &.right {
         flex-direction: column;
       }
@@ -99,6 +102,7 @@
         }
       }
     }
+
     &:nth-child(2) {
       & .about__block-img {
         &::before {
@@ -123,7 +127,7 @@
       width: 100%;
       max-width: 50%;
 
-      @include fluid(gap, 20px, 10px, 320px, 1280px);
+      @include fluid(gap, 25px, 15px, 320px, 1280px);
 
       @media (max-width: 680px) {
         max-width: 100%;
@@ -131,17 +135,18 @@
         text-align: center;
       }
     }
+
     &-title {
-      font-family: $fontBebasNeue;
+      // font-family: $fontBebasNeue;
       font-weight: 400;
-      font-size: 35px;
       text-transform: uppercase;
       color: #c699b5;
       display: flex;
       align-items: flex-end;
 
-      @include fluid(font-size, 35px, 25px, 320px, 1280px);
-      @include fluid(line-height, 42px, 32px, 320px, 1280px);
+      // @include fluid(font-size, 35px, 25px, 320px, 1280px);
+      // @include fluid(line-height, 42px, 32px, 320px, 1280px);
+      @include fluid(font-size, 16px, 14px, 320px, 1280px);
 
       & .pencil {
         width: 14px;
@@ -154,14 +159,14 @@
         }
       }
     }
+
     &-text {
       font-weight: 300;
       line-height: 1.2;
-      color: #c699b5;
+      color: #e06cb4;
       margin-bottom: 4px;
-      max-width: 340px;
 
-      @include fluid(font-size, 14px, 12px, 320px, 1280px);
+      @include fluid(font-size, 16px, 14px, 320px, 1280px);
 
       @media (max-width: 680px) {
         max-width: 100%;
@@ -171,17 +176,17 @@
     &-list {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 15px;
 
       & li {
         font-weight: 300;
         line-height: 1.2;
-        color: #c699b5;
+        color: #e06cb4;
         display: flex;
         gap: 5px;
         justify-content: flex-end;
 
-        @include fluid(font-size, 14px, 11px, 320px, 1280px);
+        @include fluid(font-size, 16px, 14px, 320px, 1280px);
 
         &::after {
           content: "";
@@ -189,12 +194,13 @@
           min-height: 5px;
           width: 5px;
           height: 5px;
-          margin-top: 5px;
+          margin-top: 8px;
           border-radius: 50%;
           background: #fda5cf;
         }
       }
     }
+
     &-mask {
       width: 100%;
       max-width: 54px;

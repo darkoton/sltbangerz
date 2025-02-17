@@ -13,9 +13,18 @@
 
   &__title {
     letter-spacing: 0px;
+    text-align: center;
+    font-family: $fontBabyGemoy;
+    -webkit-text-fill-color: #fda5cf;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ff63ad;
+    text-shadow:
+      5px 5px 0 #ff2f92,
+      11px 11px 0 #fff;
 
-    @include fluid(font-size, 90px, 30px, 320px, 1280px);
-    @include fluid(line-height, 100px, 40px, 320px, 1280px);
+    @include fluid(font-size, 60px, 20px, 320px, 1280px);
+    @include fluid(line-height, 70px, 30px, 320px, 1280px);
 
     & .word {
       & span:not(:first-child):not(.pencil) {
@@ -73,12 +82,12 @@
   &__subtitle {
     font-family: $fontBebasNeue;
     text-align: center;
-    max-width: 500px;
+    max-width: 550px;
     margin-top: 20px;
     color: #c699b5;
 
-    @include fluid(font-size, 60px, 40px, 320px, 1280px);
-    @include fluid(line-height, 55px, 35px, 320px, 1280px);
+    @include fluid(font-size, 40px, 30px, 320px, 1280px);
+    @include fluid(line-height, 35px, 25px, 320px, 1280px);
   }
 
   &__text {
