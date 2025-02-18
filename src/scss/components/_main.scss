@@ -102,6 +102,16 @@
     @include fluid(margin-bottom, 23px, 15px, 320px, 1280px);
   }
 
+  &__img {
+    width: 100%;
+    max-width: 500px;
+
+    picture,
+    img {
+      width: 100%;
+    }
+  }
+
   &__cards {
     display: grid;
     width: 100%;
